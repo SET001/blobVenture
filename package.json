@@ -1,0 +1,40 @@
+{
+  "name": "blobVenture",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SET001/blobVenture.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SET001/blobVenture/issues"
+  },
+  "homepage": "https://github.com/SET001/blobVenture#readme",
+  "dependencies": {
+    "ecsr": "0.0.4",
+    "express": "^4.17.1",
+    "pixi-tilemap": "^2.0.3",
+    "pixi.js": "^5.2.1",
+    "ramda": "^0.27.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^7.0.1",
+    "@types/ramda": "^0.26.43",
+    "browserify": "^16.5.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "mocha": "^7.1.0",
+    "typescript": "^3.8.3",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}
