@@ -28,7 +28,7 @@ task('compile', () => src('src/**/!(*.spec).{ts,tsx}', { since: lastRun('compile
   .pipe(dest('dist')))
 
 task('bundle', () => browserify()
-  .add('dist/example/index.js')
+  .add('dist/index.js')
   .bundle()
   .pipe(source('index.js'))
   .pipe(dest('./public')))
