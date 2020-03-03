@@ -1,6 +1,5 @@
 import { clone } from 'ramda'
-import { game } from '../../lib/game'
-import { render, movement } from '../../lib'
+import { game, render, movement } from 'ecsr'
 
 export const base = {
   game: clone(game.state),

@@ -1,5 +1,4 @@
-import { PositionComponent } from "../lib/components"
-import { RenderComponent } from "../lib"
+import { PositionComponent, RenderComponent } from "ecsr"
 
 import * as PIXI from 'pixi.js'
 (window as any).PIXI = PIXI

@@ -1,14 +1,14 @@
-import { ThunkDispatch } from 'redux-thunk'
+// import { ThunkDispatch } from 'redux-thunk'
 
 import {
   createApp, Action, PositionSystemState,
-} from '../lib'
-import { game, GameState } from '../lib/game'
-import { gameTickAction, gameAddObject } from '../lib/game/actions'
-import { position } from '../lib/position'
-import { movement, MovementSystemState } from '../lib/movement'
+  game, GameState, position,
+  movement, MovementSystemState,
+  render, RenderSystemState
+} from 'ecsr'
 
-import { render, RenderSystemState } from '../lib/render'
+const {gameTickAction, gameAddObject} =  game.actions
+
 import { config } from './config'
 import { createCreature } from './creature/actions'
 import { createTilemap } from './tilemap'
@@ -23,7 +23,7 @@ export interface RootState{
   render: RenderSystemState
 }
 
-export type AppDispatch = ThunkDispatch<RootState, undefined, Action>;
+// export type AppDispatch = ThunkDispatch<RootState, undefined, Action>;
 
 (async () => {
 
@@ -52,7 +52,7 @@ export type AppDispatch = ThunkDispatch<RootState, undefined, Action>;
   const map = resources.map.data
   console.log({map})
   // const layer = map.layers.find(layer=>layer.name === 'land')
-  await Promise.all(map.layers.map(layer=>{
+  await Promise.all(map.layers.map((layer: any)=>{
     const tilemap = createTilemap(layer, resources.atlas.textures)
     return app.store.dispatch(gameAddObject(tilemap))
   }))

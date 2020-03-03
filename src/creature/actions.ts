@@ -1,9 +1,12 @@
 import { createAction } from '@reduxjs/toolkit'
 
-import { PositionComponent } from '../../lib/position/component'
+import {
+  PositionComponent, 
+  game,
 
-import { gameAddObject } from '../../lib/game/actions'
-import { MovementComponent, RenderComponent } from '../../lib'
+  MovementComponent, RenderComponent
+ } from 'ecsr'
+
 import { Jelly } from './view'
 
 export const addAction = createAction<any>('creature/add')
@@ -21,7 +24,7 @@ export const createCreature = (layer: any) => async (dispatch: any) => {
   object.render.layer = layer
 
   await Promise.all([
-    dispatch(gameAddObject(object)),
+    dispatch(game.actions.gameAddObject(object)),
     dispatch(addAction(object)),
   ])
 }
