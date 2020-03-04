@@ -1,14 +1,17 @@
+const { indexToX, indexToY } = require('./utils')
+
 const tilemapwidth = 18
 const tileWidth = 32
+const toX = indexToX(tilemapwidth, tileWidth)
+const toY = indexToY(tilemapwidth, tileWidth)
+
 const res = {
   frames: Array.from({length: 343}).reduce((acc, k, index)=>Object.assign(
     acc,
     {[index]: {
       frame: {
-        x: ((index % tilemapwidth)-1)*tileWidth,
-        y: Math.ceil((index)/tilemapwidth-1)*tileWidth,
-        // x: ((index % tilemapwidth)+1)*tileWidth,
-        // y: Math.ceil((index+1)/tilemapwidth)*tileWidth,
+        x: toX(index-1),
+        y: toY(index-1),
         w: tileWidth,
         h: tileWidth
       },
