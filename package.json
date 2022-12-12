@@ -21,7 +21,7 @@
   "homepage": "https://github.com/SET001/blobVenture#readme",
   "dependencies": {
     "ecsr": "0.0.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "pixi-tilemap": "^2.0.3",
     "pixi.js": "^5.2.1",
     "ramda": "^0.27.0"
